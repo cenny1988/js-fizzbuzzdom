@@ -14,4 +14,34 @@ Consigli del giorno:
 Buon lavoro e buon divertimento!
 */
 
-console.log('hei there!');
+const contSqaure = document.getElementById('container-square');
+
+// con un ciclo sul contenitore principale aggiungiamo tutti e 100 i div square
+for (i=1; i<=100; i++){
+    //primo metodo per poter inserire gli square nel container
+    //contSqaure.innerHTML += `<div class="square">${i}</div>`
+
+    //secondo metodo per inserire gli square nel container
+    //creamo l'elemento div poi aggiungiamo la classe sqaure e poi al suo interno il valore di i
+    let square = document.createElement("div");
+    square.classList.add("square");
+    square.append(i);
+    
+    //se i è divisibile per 3 e 5 allora aggiungiamo le classi fizz e buzz e sostituiamo il valore di i nel div con fizzbuzz
+    //altrimenti verifichiamo se i è divisibile solo per 3 ed aggiungiamo solo la classe fizz e sostituiamo il valore di i con fizz
+    //altrimenti ancora verifichiamo se i è divisibile solo per 5 e aggiungiamo la classe buzz e sostituiamo il valore di i con buzz
+    if (i % 3 === 0 && i % 5 === 0){
+        square.classList.add("fizz","buzz");
+        square.innerHTML = `fizzbuzz`;
+    }else if (i % 3 === 0){
+        square.classList.add("fizz");
+        square.innerHTML = `fizz`;
+    } else if (i % 5 === 0){
+        square.classList.add("buzz");
+        square.innerHTML = `buzz`;
+    }
+
+    // inseriamo il div square nel contenitore
+    contSqaure.append(square);
+
+}

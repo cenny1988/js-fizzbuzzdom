@@ -5,5 +5,41 @@
 }
 
 body{
-    background-color: aquamarine;
+    background-color: #083b4c;
+    text-align: center;
+}
+h1{
+    font-size: 4rem;
+    margin: 2rem 0;
+    color: #fff;
+}
+#container{
+    width: 90%;
+    margin: 0 auto;
+}
+#container-square{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.square{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: #1389b2;
+    width: calc(99% / 7 - 1rem);
+    margin-bottom: 1rem;
+}
+/* divisibile per 3 */
+.fizz{
+    background-color: #0ad6a1;
+}
+/* divisibile per 5 */
+.buzz{
+    background-color: #ffd166;
+}
+/* divisibile sia per 3 che per 5 */
+.fizz.buzz{
+    background-color: #f0466f;
 }
