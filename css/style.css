@@ -28,8 +28,8 @@ h1{
     align-items: center;
     height: 100px;
     background-color: #1389b2;
-    width: calc(99% / 7 - 1rem);
-    margin-bottom: 1rem;
+    width: calc(100% / 7 - 1%);
+    margin-bottom: 1%;
 }
 /* divisibile per 3 */
 .fizz{
